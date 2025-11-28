@@ -151,3 +151,35 @@ Se recomienda crear un índice compuesto para optimizar la consulta de productos
 db.products\\\_reviews.createIndex({ "discount\\\_percentage": -1, "rating": -1, "discounted\\\_price": 1 });
 
 
+
+\### 3.2. Verificación de Uso de Índice
+
+
+
+El siguiente comando demuestra que la consulta usa el índice (IXSCAN) en lugar de escanear toda la colección (COLLSCAN), lo que prueba la mejora de rendimiento.
+
+
+
+\*\*Comando de Verificación (en Mongo Shell):\*\*
+
+```JavaScript
+
+db.products_reviews.aggregate(bestDiscountedItems).explain('executionStats');
+
+## 4. Resultados de Análisis y Visualización (Entregable 3)
+
+### 4.1. Dashboard de Visualización (MongoDB Charts)
+
+Se creó un Dashboard en MongoDB Atlas Charts para visualizar los resultados de las agregaciones.
+
+* **Gráfico Demostrado:** Gráfico de barras que muestra el **rating** promedio por **category** principal.
+
+**ENLACE PÚBLICO AL DASHBOARD:**
+
+https://charts.mongodb.com/charts-project-0-bdwbysr/public/dashboards/692a0620-297a-42be-895e-ab8ea38fcdbe
+
+\## 5. Repositorio de GitHub
+
+El código fuente completo de este proyecto se encuentra en el siguiente enlace:
+
+https://github.com/juanhas123-a11y/Amazon-Products.git
