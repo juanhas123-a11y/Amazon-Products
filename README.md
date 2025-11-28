@@ -73,7 +73,7 @@ Se recomienda crear un índice compuesto para optimizar la consulta de productos
 
 \*\*Comando de Creación (en Mongo Shell):\*\*
 ```javascript
-db.products\_reviews.createIndex({ "discount\_percentage": -1, "rating": -1, "discounted\_price": 1 });
+db.products_reviews.createIndex({ "discount_percentage": -1, "rating": -1, "discounted_price": 1 });
 
 ```
 
