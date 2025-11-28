@@ -93,7 +93,7 @@ db.products_reviews.aggregate(bestDiscountedItems).explain('executionStats');
 
 ```
 
-## 4. Resultados de Análisis y Visualización (Entregable 3)
+## 4. Resultados de Análisis y Visualización 
 
 ### 4.1. Dashboard de Visualización (MongoDB Charts)
 
