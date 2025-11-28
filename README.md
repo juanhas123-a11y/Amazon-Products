@@ -75,7 +75,7 @@ Se recomienda crear un índice compuesto para optimizar la consulta de productos
 ```javascript
 db.products\_reviews.createIndex({ "discount\_percentage": -1, "rating": -1, "discounted\_price": 1 });
 
-
+```
 
 \### 3.2. Verificación de Uso de Índice
 
@@ -89,7 +89,9 @@ El siguiente comando demuestra que la consulta usa el índice (IXSCAN) en lugar 
 
 ```JavaScript
 
-db.products_reviews.aggregate(bestDiscountedItems).explain('executionStats');```
+db.products_reviews.aggregate(bestDiscountedItems).explain('executionStats');
+
+```
 
 ## 4. Resultados de Análisis y Visualización (Entregable 3)
 
