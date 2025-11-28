@@ -147,8 +147,7 @@ Se recomienda crear un índice compuesto para optimizar la consulta de productos
 \*\*Comando de Creación (en Mongo Shell):\*\*
 
 ```javascript
-
-db.products\\\_reviews.createIndex({ "discount\\\_percentage": -1, "rating": -1, "discounted\\\_price": 1 });
+db.products\_reviews.createIndex({ "discount\_percentage": -1, "rating": -1, "discounted\_price": 1 });```
 
 
 
@@ -164,7 +163,7 @@ El siguiente comando demuestra que la consulta usa el índice (IXSCAN) en lugar 
 
 ```JavaScript
 
-db.products_reviews.aggregate(bestDiscountedItems).explain('executionStats');
+db.products_reviews.aggregate(bestDiscountedItems).explain('executionStats');```
 
 ## 4. Resultados de Análisis y Visualización (Entregable 3)
 
