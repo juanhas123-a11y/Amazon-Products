@@ -14,8 +14,8 @@ Este repositorio contiene la implementación backend de un proyecto de análisis
 
 El proyecto se aloja en un clúster compartido \*\*M0 Sandbox\*\* en MongoDB Atlas.
 
-\* \*\*Nombre del Clúster:\*\* `\\\[Coloca el nombre de tu clúster aquí, ej: GlobalMarketCluster]`
-\* \*\*Cadena de Conexión (URI):\*\* `mongodb+srv://<username>:<password>@tucluster.mongodb.net/...`
+\* \*\*GlobalMarketCluster:\*\* `\\\[GlobalMarketCluster]`
+\* \*\*Cadena de Conexión (URI):\*\* `mongodb+srv://juanhas123_db_user:<db_password>@globalmarketcluster.dxqsr2z.mongodb.net/`
 
 \*\*Nota:\*\* Asegúrese de tener un usuario de base de datos creado con permisos de lectura y escritura (`Read and write to any database`) y que la dirección IP de conexión esté autorizada en \*\*Network Access\*\* de Atlas.
 
