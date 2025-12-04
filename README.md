@@ -79,16 +79,11 @@ db.products_reviews.createIndex({ "discount_percentage": -1, "rating": -1, "disc
 
 \### 3.2. Verificación de Uso de Índice
 
-
-
 El siguiente comando demuestra que la consulta usa el índice (IXSCAN) en lugar de escanear toda la colección (COLLSCAN), lo que prueba la mejora de rendimiento.
-
-
 
 \*\*Comando de Verificación (en Mongo Shell):\*\*
 
 ```JavaScript
-
 db.products_reviews.aggregate(bestDiscountedItems).explain('executionStats');
 
 ```
@@ -113,6 +108,7 @@ db.products_reviews.aggregate([
   },
   { $limit: 5 }
 ]);
+```
 
 ## 4. Resultados de Análisis y Visualización 
 
