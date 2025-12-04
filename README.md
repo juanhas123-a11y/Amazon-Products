@@ -92,6 +92,27 @@ El siguiente comando demuestra que la consulta usa el índice (IXSCAN) en lugar 
 db.products_reviews.aggregate(bestDiscountedItems).explain('executionStats');
 
 ```
+### 3.3. Implementación de Atlas Search (Búsqueda Difusa)
+
+Se implementó un índice de búsqueda Lucene en MongoDB Atlas (nombrado `ReviewDeProductos`) sobre el campo `product_name` para permitir búsquedas difusas (`fuzzy search`), simulando la funcionalidad de una barra de búsqueda de e-commerce.
+
+**Comando de Verificación (en Mongo Shell):**
+El siguiente comando demuestra que, incluso con un error ortográfico en la palabra clave (`televison`), el índice devuelve resultados relevantes:
+
+```javascript
+db.products_reviews.aggregate([
+  {
+    $search: {
+      index: "ReviewDeProductos",
+      text: {
+        query: "televison",
+        path: "product_name",
+        fuzzy: {}
+      }
+    }
+  },
+  { $limit: 5 }
+]);
 
 ## 4. Resultados de Análisis y Visualización 
 
