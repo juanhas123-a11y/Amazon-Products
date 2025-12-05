@@ -59,7 +59,7 @@ El archivo `queries.js` contiene tres \*pipelines\* de agregación complejos (ut
 \*\*Para Ejecutar las Consultas:\*\*
 
 1\. Copiar el contenido de la variable del \*pipeline\* (ej: `var topCategories = \\\[...]`) y pegarlo en la Mongo Shell.
-2\. Ejecutar el pipeline con: `db.products\\\_reviews.aggregate(nombreDelPipeline);`
+2\. Ejecutar el pipeline con: `db.products_reviews.aggregate(NombreDelPipeline);`
 
 ---
 
